@@ -4,10 +4,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-class Pomoc extends JFrame
+class Pomoc extends JDialog
 {
-    Pomoc()
+    Pomoc(JFrame parent)
     {
+        super(parent, true);
         this.setTitle("Pomoc");
         this.setBounds(350, 350, 770, 140);
 

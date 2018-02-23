@@ -87,6 +87,7 @@ public class Zipper extends JFrame {
     private JButton bOAutorze;
     private JMenuBar pasekMenu = new JMenuBar();
     private JFileChooser chooser = new JFileChooser();
+    private JFrame glowna = this;
 
     private class Akcja extends AbstractAction
     {
@@ -108,9 +109,9 @@ public class Zipper extends JFrame {
                     stworzArchiwumZip();
             }
             else if (e.getActionCommand().equals("O autorze"))
-                new OAutorze().setVisible(true);
+                new OAutorze(glowna).setVisible(true);
             else if (e.getActionCommand().equals("Pomoc"))
-                new Pomoc().setVisible(true);
+                new Pomoc(glowna).setVisible(true);
         }
 
         private void dodajWpisDoArchiwum()

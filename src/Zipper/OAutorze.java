@@ -6,10 +6,11 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 
-class OAutorze extends JFrame
+class OAutorze extends JDialog
 {
-    OAutorze()
+    OAutorze(JFrame parent)
     {
+        super(parent, true);
         this.setTitle("O autorze");
         this.setBounds(475, 375, 350, 150);
 
